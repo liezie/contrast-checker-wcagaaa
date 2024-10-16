@@ -46,6 +46,12 @@ fn print_result(ratio: f32) {
     println!("This does not meet WCAG level AA standards for text.");
     println!("To meet level AA, text must have at least a 4.5:1 ratio against its background.");
   }
+    if ratio >= 7.0 {
+    println!("This meets WCAG level AAA standards for text!");
+  } else {
+    println!("This does not meet WCAG level AAA standards for text.");
+    println!("To meet level AAA, text must have at least a 7:1 ratio against its background.");
+  }
 }
 
 fn convert_to_rgb(arg: &str, num: i32) -> Result<rgb::RGB8, Box<dyn std::error::Error>> {
